@@ -1,0 +1,50 @@
+.navigation {
+	margin-bottom: 50px;
+}
+
+.top-bar-section ul li.active > a {
+  background: #008cba;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-size: 60%;
+    color: #6f6f6f;
+    line-height: 0; }
+
+.top-bar .name h1 a:before {
+    background-image: url('cimer_kicsi.jpg');
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 80px;
+    margin-right: 10px;
+    position: absolute;
+    width: 66px;
+    top: 5px;
+    left: 0px;
+}
+
+.top-bar .name h1 a {
+    padding-left: 90px;
+    font-size: 90%;
+}
+
+.post-time {
+	color: #555;
+	line-height: 62px;
+	margin-right: 1rem;
+}
+
+.row.post-wrap {
+	margin-bottom: 15px;
+}
