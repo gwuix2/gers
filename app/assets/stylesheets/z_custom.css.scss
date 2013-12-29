@@ -21,19 +21,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #6f6f6f;
     line-height: 0; }
 
-.top-bar .name h1 a:before {
-    background-image: url('cimer_kicsi.jpg');
-    background-repeat: no-repeat;
-    content: "";
-    display: inline-block;
-    height: 80px;
-    margin-right: 10px;
-    position: absolute;
-    width: 66px;
-    top: 5px;
-    left: 0px;
-}
-
 .top-bar .name h1 a {
     padding-left: 90px;
     font-size: 90%;
@@ -47,4 +34,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .row.post-wrap {
 	margin-bottom: 15px;
+}
+
+#logo {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  background: #eee;
 }

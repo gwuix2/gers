@@ -36,7 +36,7 @@ end
 gem 'thin'
 ## AUTH
 gem 'devise'
-gem 'pundit'
+gem 'cancan'
 ## STYLE
 gem 'foundation-rails'
 gem 'rails_layout', :group => :development
@@ -50,6 +50,12 @@ gem 'haml-rails'
 ##
 gem 'capybara'
 gem 'factory_girl'
+##
+gem 'rails-i18n', '~> 4.0.0'
+##
+gem "rmagick"
+gem 'carrierwave'
+gem 'jquery-fileupload-rails'
 
 
 # Use ActiveModel has_secure_password

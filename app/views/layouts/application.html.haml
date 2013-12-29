@@ -12,10 +12,14 @@
   %body
     .navigation
       %header
+        - if can? :update, @post
+          = render 'layouts/admin_nav'
+        = render 'shared/logo'
         = render 'layouts/navigation'
     .row
       %main{:role => "main"}
         = render 'layouts/messages'
         = yield
+    = render 'shared/footer'
     -# Foundation 5 won't work when application.js is included in HEAD
     = javascript_include_tag "application"

@@ -1,26 +1,24 @@
 -# navigation styled for Zurb Foundation 5
 -# the syntax for data-topbar may need to change for Zurb Foundation 5
-.row
-  .contain-to-grid
-    %nav.top-bar{"data-topbar" => ""}
-      %ul.title-area
-        %li.name
-          %h1
-            = link_to 'Gersekarát Község', root_path
-        %li.toggle-topbar.menu-icon
-          %a{:href => "#"}
-            %span Menu
-      %section.top-bar-section
-        / Right Nav Section
-        %ul.right
-          %li{class: "#{"active" if controller.controller_name != "post"}"}
-            = link_to "Aktuális", root_path
-          %li.has-dropdown
-            %a{href: "#"} Településünk
-            %ul.dropdown
-              %li
-                %a{href: "#"} Proba
-          %li
-            %a{href: "#"} Archívum
-          %li
-            %a{href: "#"} Vendégváró
+.contain-to-grid
+  %nav.top-bar{"data-topbar" => ""}
+    %ul.title-area
+      %li.toggle-topbar.menu-icon
+        %a{:href => "#"}
+          %span Menu
+    %section.top-bar-section
+      / Right Nav Section
+      %ul.right
+        %li.has-dropdown
+          %a{href: "#"} Településünk
+          %ul.dropdown
+            %li
+              %a{href: "#"} Proba
+        %li
+          %a{href: "#"} Archívum
+        %li
+          %a{href: "#"} Vendégváró
+      / Left Nav Section
+      %ul.left
+        %li{class: "#{"active" if controller.controller_name != "post"}"}
+          = link_to "Aktuális", root_path

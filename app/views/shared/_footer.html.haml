@@ -1,0 +1,9 @@
+.footer
+  .row
+    .large-12.columns
+      %ul.side-nav.right
+        %li
+          - if current_user
+            = link_to 'Kilépés', destroy_user_session_path, method: :delete
+          - else
+            = link_to 'Belépés', new_user_session_path
