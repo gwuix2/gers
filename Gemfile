@@ -54,9 +54,6 @@ gem 'factory_girl'
 ##
 gem 'rails-i18n', '~> 4.0.0'
 ##
-gem "rmagick"
-gem 'carrierwave'
-gem 'jquery-fileupload-rails'
 ##
 gem 'will_paginate', '~> 3.0'
 ##
