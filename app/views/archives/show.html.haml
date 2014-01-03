@@ -1,0 +1,21 @@
+.row
+  .small-12.columns
+    %h2= @archive.title
+.row
+  .small-12.columns
+    = simple_format(@archive.body)
+- unless @archive.img.empty?
+  .row
+    .small-12.columns
+      %h2 Képek
+      %ul.clearing-thumbs{"data-clearing" => ""}
+        - @archive.img.each_line do |url|
+          %li
+            = link_to url, class: 'th' do
+              = image_tag(url)
+- if can? :update, @psot
+  %hr/
+  .row
+    .small-12.columns
+      = link_to "Szerkesztés", edit_archive_path(@archive), class: "button"
+      = link_to "Törlés", archive_path(@archive), method: :delete, data: { confirm: 'Biztos, hogy törlöd??' }, class: "button secondary"

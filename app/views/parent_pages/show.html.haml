@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @parent_page.title
+
+= link_to 'Edit', edit_parent_page_path(@parent_page)
+\|
+= link_to 'Back', parent_pages_path

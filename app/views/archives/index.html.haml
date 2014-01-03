@@ -1,0 +1,25 @@
+/.row
+/  .small-12.columns
+/    - @archives.each do |archive|
+/      .row
+/        .small-12.columns
+/          %h4
+/            = archive.created_at.strftime('%Y/%m/%d')
+/            = link_to archive.title, archive
+/
+
+%table.archive-table
+  %thead
+    %tr
+      %th{width: "200"} Dátum
+      %th Esemény
+      %th{width: "150"} Képek
+  %tbody
+    - @archives.each do |archive|
+      %tr
+        %td
+          %h5= archive.adate
+        %td
+          %h5= link_to archive.title, archive
+        %td
+          %h5= archive.img.lines.count

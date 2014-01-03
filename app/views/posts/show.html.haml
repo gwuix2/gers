@@ -5,3 +5,18 @@
 .row
   .small-12.columns
     = simple_format(@post.body)
+- unless @post.img.empty?
+  .row
+    .small-12.columns
+      %h2 Képek
+      %ul.clearing-thumbs{"data-clearing" => ""}
+        - @post.img.each_line do |url|
+          %li
+            = link_to url, class: 'th' do
+              = image_tag(url)
+- if can? :update, @psot
+  %hr/
+  .row
+    .small-12.columns
+      = link_to "Szerkesztés", edit_post_path(@post), class: "button"
+      = link_to "Törlés", post_path(@post), method: :delete, data: { confirm: 'Biztos, hogy törlöd??' }, class: "button secondary"

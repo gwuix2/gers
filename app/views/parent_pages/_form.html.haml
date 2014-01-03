@@ -1,0 +1,4 @@
+= simple_form_for @parent_page do |f|
+  = f.input :title, label: "Cím"
+  = f.submit "Mentés", class: "button"
+  = link_to "Mégse", parent_pages_path, class: "button secondary"

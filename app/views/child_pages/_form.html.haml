@@ -1,0 +1,6 @@
+= simple_form_for @child_page do |f|
+  = f.input :title, label: "Név"   
+  = f.input :body, label: "Test", :input_html => { :rows => 20, :style => 'height: auto'}
+  = f.input :parent_page_id, :collection => ParentPage.all, :value_method => :id,:label => "Szülő oldal" ,:include_blank => false
+  = f.submit "Mentés" , class: "button"
+  = link_to "Mégse", child_pages_path, class: "button secondary"

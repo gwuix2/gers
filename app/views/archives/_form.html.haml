@@ -1,9 +1,7 @@
-= simple_form_for @post do |f|
+= simple_form_for @archive do |f|
   = f.input :title, label: "Cím"
+  = f.input :adate, label: "Dátum"
   = f.input :body, label: "Test", :input_html => { :rows => 20, :style => 'height: auto'}
   = f.input :img, label: "Képek", :input_html => { :rows => 10, :style => 'height: auto'}
-  %ul.button-group
-    %li
-      = f.button :submit, "Mentés", class: 'button'
-    %li
-      = link_to 'Mégse', root_path, class: 'button secondary'
+  = f.submit "Mentés", class: "button"
+  = link_to "Mégse", root_path, class: "button secondary"

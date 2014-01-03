@@ -1,0 +1,18 @@
+%h1 Szülő oldalak
+
+%table
+  %tr
+    %th Cím
+    %th
+    %th
+    %th
+
+  - @parent_pages.each do |parent_page|
+    %tr
+      %td= parent_page.title
+      %td= link_to 'Szerkesztés', edit_parent_page_path(parent_page)
+      %td= link_to 'Törlés', parent_page, :method => :delete, :data => { :confirm => 'Biztos, hogy törlöd??' }
+
+%br
+
+= link_to 'Új szülőoldal', new_parent_page_path, class: "button"

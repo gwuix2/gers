@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131229100802) do
+ActiveRecord::Schema.define(version: 20131229163956) do
+
+  create_table "archives", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.text     "img"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "adate"
+  end
+
+  create_table "child_pages", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "parent_page_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "parent_pages", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "photos", force: true do |t|
     t.string   "image"
@@ -26,6 +49,7 @@ ActiveRecord::Schema.define(version: 20131229100802) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.text     "img"
   end
 
   create_table "users", force: true do |t|

@@ -1,4 +1,10 @@
 Gerse::Application.routes.draw do
+  resources :parent_pages
+
+  resources :child_pages
+
+  resources :archives
+
   devise_for :users
   resources :posts
 

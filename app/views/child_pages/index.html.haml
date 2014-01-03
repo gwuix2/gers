@@ -1,0 +1,20 @@
+%h1 Aloldalak
+
+%table
+  %tr
+    %th Cím
+    %th Szülő oldal
+    %th
+    %th
+    %th
+
+  - @child_pages.each do |child_page|
+    %tr
+      %td= link_to child_page.title, child_page
+      %td= ParentPage.find(child_page.parent_page_id).title if child_page.parent_page
+      %td= link_to 'Szerkesztés', edit_child_page_path(child_page)
+      %td= link_to 'Törlés', child_page, :method => :delete, :data => { :confirm => 'Biztos, hogy törlöd?' }
+
+%br
+
+= link_to 'Új aloldal', new_child_page_path, class: "button"

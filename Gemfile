@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', :group => :development
+gem 'pg', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -56,8 +57,12 @@ gem 'rails-i18n', '~> 4.0.0'
 gem "rmagick"
 gem 'carrierwave'
 gem 'jquery-fileupload-rails'
-
-
+##
+gem 'will_paginate', '~> 3.0'
+##
+gem 'certified'
+gem 'excon'
+gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

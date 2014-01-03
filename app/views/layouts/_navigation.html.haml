@@ -9,16 +9,24 @@
     %section.top-bar-section
       / Right Nav Section
       %ul.right
-        %li.has-dropdown
-          %a{href: "#"} Településünk
-          %ul.dropdown
-            %li
-              %a{href: "#"} Proba
-        %li
-          %a{href: "#"} Archívum
+        - ParentPage.all.each do |ppage|
+          %li.has-dropdown
+            %a{href: "#"}= ppage.title
+            %ul.dropdown
+              - ppage.child_pages.each do |cpage|
+                %li
+                  = link_to cpage.title, cpage
+
+        /%li.has-dropdown
+        /  %a{href: "#"} Településünk
+        /  %ul.dropdown
+        /    %li
+        /      %a{href: "#"} Proba
+        %li{class: "#{"active" if controller.controller_name == "archives"}"}
+          = link_to "Archívum", archives_path
         %li
           %a{href: "#"} Vendégváró
       / Left Nav Section
       %ul.left
-        %li{class: "#{"active" if controller.controller_name != "post"}"}
+        %li{class: "#{"active" if controller.controller_name == "posts"}"}
           = link_to "Aktuális", root_path
